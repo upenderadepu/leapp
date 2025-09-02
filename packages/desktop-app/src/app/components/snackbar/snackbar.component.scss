@@ -1,0 +1,78 @@
+@import "../../../assets/scss/mixins/palette";
+
+.float { float: left; }
+.clear { clear: both; }
+
+.holder {
+  position: relative;
+  z-index: 9999;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Remove MDC snackbar black overlay
+::ng-deep {
+  // Target all possible MDC snackbar containers and wrappers
+  // .mat-mdc-snack-bar-container,
+  // .mat-mdc-snack-bar-container *,
+  // .cdk-overlay-pane {
+  //   background: transparent !important;
+  //   background-color: transparent !important;
+  //   box-shadow: none !important;
+  //   border: none !important;
+  // }
+
+  .mat-mdc-snack-bar-container * {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .add-error-link-cursor {
+    div .link {
+      cursor: pointer!important;
+      text-decoration: underline;
+      color: #ffffff;
+      transition: all 0.3s ease;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+
+.icon {
+  width: 8%;
+  height: 100%;
+  i {
+    font-size: 20px;
+    color: white;
+  }
+}
+
+.large {
+  width: 84%;
+  padding: 0 10px;
+  overflow-wrap: break-word;
+}
+
+.small {
+  width: 8%;
+  height: 100%;
+  font-size: 22px;
+  font-weight: lighter;
+  text-decoration: none;
+  color: $background;
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  display: inline-flex;
+  justify-content: flex-end;
+  &:hover { opacity: 0.6; }
+}
+

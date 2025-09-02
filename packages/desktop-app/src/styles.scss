@@ -1,0 +1,37 @@
+/**
+Library scss
+*/
+//noinspection CssUnknownTarget
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+/**
+Ng Select theme material
+ */
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+/**
+Custom Global styles
+*/
+@import "assets/scss/mixins/palette";
+@import "assets/scss/mixins/utility";
+@import "assets/scss/icon-font";
+@import "assets/scss/form";
+@import "assets/scss/ng-select";
+@import "assets/scss/modals";
+@import "assets/scss/toast";
+@import "assets/scss/global";
+
+/**
+Bootstrap theme override
+ */
+$body-color: $charcoal-grey;
+
+$theme-colors: (
+  'primary': $charcoal-grey,
+  'success': $success,
+  'danger': $copper,
+  'light': #ffffff
+);

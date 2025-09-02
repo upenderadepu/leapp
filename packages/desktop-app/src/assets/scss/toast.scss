@@ -1,0 +1,14 @@
+.toast-error, .toast-warning, .toast-success, .toast-info {
+  border-radius: 3px;
+  padding: 10px 20px;
+  min-width: 400px;
+  z-index: 9999;
+  font-size: 14px;
+}
+
+.toast-info { color: #ffffff !important; background: #64BFFC!important; }
+.toast-success { color: #ffffff!important; background: rgba(72, 199, 76, 0.8) !important; }
+.toast-error { color: #ffffff !important; background: #dc2c29 !important; }
+.toast-warning { color: #ffffff !important; background: #ffca25 !important; }
+
+.toast-container { z-index: 99; }

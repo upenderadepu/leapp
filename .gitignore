@@ -1,19 +1,24 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
-/tmp
-/out-tsc
-/release
+packages/desktop-app/dist
+#packages/desktop-app/build
+packages/desktop-app/tmp
+packages/desktop-app/out-tsc
+packages/desktop-app/release
+packages/desktop-app/electron/dist
 # Only exists if Bazel was run
-/bazel-out
+packages/desktop-app/bazel-out
+packages/desktop-app/.angular
+**/team-service.ts
+**/leapp-team-core
 
 # dependencies
-/node_modules
+**/node_modules
 
 # profiling files
-chrome-profiler-events.json
-speed-measure-plugin.json
+**/chrome-profiler-events.json
+**/speed-measure-plugin.json
 
 # IDEs and editors
 /.idea
@@ -23,6 +28,7 @@ speed-measure-plugin.json
 *.launch
 .settings/
 *.sublime-workspace
+release/
 
 # IDE - VSCode
 .vscode/*
@@ -33,24 +39,60 @@ speed-measure-plugin.json
 .history/*
 
 # misc
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
-/typings
+**/.sass-cache
+**/connect.lock
+**/coverage
+**/libpeerconnection.log
+**/npm-debug.log
+**/yarn-error.log
+**/testem.log
+**/typings
+**/generated
+**/layer
+**/dist
 
 # System Files
 .DS_Store
 Thumbs.db
 
 # Windows certificate
-windows.pfx
-
-package-lock.json
-
-/electron/dist
+packages/desktop-app/windows.pfx
+packages/desktop-app/windows_sign_certificate.pfx
 
 start.sh
+buildAll.sh
+
+#Mkdocs
+site/
+temp/
+
+#Pyenv
+.python-version
+
+packages/core/node_modules
+packages/core/dist
+
+packages/cli/*-debug.log
+packages/cli/*-error.log
+packages/cli/.nyc_output
+packages/cli/dist
+packages/cli/build
+packages/cli/lib
+packages/cli/tmp
+packages/cli/yarn.lock
+packages/cli/node_modules
+packages/cli/oclif.manifest.json
+/release/
+
+lerna-debug.log
+
+.run
+
+packages/dpapi-addon/build
+
+packages/desktop-app/integration-tests/.env.ts
+
+nightly-version
+packages/desktop-app/projects
+
+packages/desktop-app/.sentry-token
